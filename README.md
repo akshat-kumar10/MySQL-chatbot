@@ -52,12 +52,20 @@ Running on local URL: [http://127.0.0.1:7860](http://127.0.0.1:7860)
 With share=True, you’ll also get a temporary public link.
 ```
 ## ⚙️ Configuration
-Database Settings can be entered in the Gradio UI (host, port, username, password, DB name).
+Database Settings can be entered in the Gradio UI (host, port, username, password, and DB name).
 
 Defaults assume the Chinook sample database, and the default user is listed as root.
 
 ## 📝 Logging
 All queries and errors are logged to chat_with_mysql.log
+
+Example:
+
+```bash
+2025-09-19 10:34:12 | INFO | User: How many artists are there?
+2025-09-19 10:34:12 | INFO | Generated SQL: SELECT COUNT(*) FROM Artist;
+2025-09-19 10:34:13 | INFO | Response: There are 275 artists in the database.
+```
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
